@@ -1,0 +1,11 @@
+node_modules/
+pnpm-lock.yaml
+*.log
+npm-debug.log*
+.DS_Store
+.env
+.env.*
+.vscode/
+.idea/
+*.swp
+*.tgz

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "LLM Resilience",
+    "description": "Configurable idle-timeout policy (30 s by default) and same-route retry policy for LLM requests. It never changes the selected provider or model."
+  }
+}

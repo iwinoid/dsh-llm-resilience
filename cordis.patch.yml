@@ -1,0 +1,17 @@
+# dsh-llm-resilience 的 bundle 层：插入唯一的 Host 行。
+#
+# 该行自带 Config（全部字段 volatile），因此安装后「设置 → LLM 韧性」页
+# 可以直接把默认值/开关写入本 profile 的用户配置层；写入立即生效，无需重启。
+#
+# 如果不用 bundle 机制，也可以在 profile 的 cordis.patch.yml 里自行 insert：
+#
+#   - insert:
+#       - id: llm-resilience
+#         name: dsh-llm-resilience
+#         config:
+#           defaultStreamIdleTimeoutMs: 30000
+#
+# 注意：按 id 覆盖会整体替换该行 config，未写的字段回落到 Config 默认值。
+- insert:
+    - id: llm-resilience
+      name: dsh-llm-resilience
